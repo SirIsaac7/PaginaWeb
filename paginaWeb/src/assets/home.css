@@ -1,0 +1,109 @@
+.home-hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #232526 60%, #414345 100%);
+  overflow: hidden;
+}
+.home-bg {
+  position: absolute;
+  inset: 0;
+  background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+  opacity: 0.22;
+  z-index: 1;
+  filter: blur(3px);
+}
+.home-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: #fff;
+  padding: 2rem 3rem;
+  border-radius: 1.5rem;
+  background: rgba(40, 40, 60, 0.90);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.45);
+  max-width: 600px;
+}
+.home-title {
+  font-size: 3rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+  letter-spacing: 2px;
+  text-shadow: 0 2px 12px #000;
+  animation: popIn 1s cubic-bezier(.68,-0.55,.27,1.55);
+}
+.home-desc {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+  font-weight: 400;
+}
+.home-btn {
+  background: linear-gradient(90deg, #e94560 0%, #0f3460 100%);
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 0.8rem 2.2rem;
+  border: none;
+  border-radius: 2rem;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(233,69,96,0.3);
+  transition: background 0.3s, transform 0.2s;
+  margin-bottom: 2rem;
+}
+.home-btn:hover {
+  background: linear-gradient(90deg, #0f3460 0%, #e94560 100%);
+  transform: scale(1.07);
+}
+.home-features {
+  margin: 2rem 0 1.5rem 0;
+  background: rgba(30, 30, 60, 0.7);
+  border-radius: 1rem;
+  padding: 1.2rem 1.5rem;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.2);
+}
+.home-features h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.7rem;
+  color: #e94560;
+}
+.home-features ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.home-features li {
+  font-size: 1.1rem;
+  margin: 0.5rem 0;
+  text-align: left;
+  padding-left: 1.2rem;
+}
+.home-social {
+  margin-top: 2rem;
+}
+.home-social h2 {
+  font-size: 1.2rem;
+  color: #0f3460;
+  margin-bottom: 0.7rem;
+}
+.social-icon {
+  font-size: 2rem;
+  margin: 0 0.7rem;
+  text-decoration: none;
+  transition: transform 0.2s, color 0.2s;
+  color: #e94560;
+}
+.social-icon:hover {
+  color: #ffd700;
+  transform: scale(1.2);
+}
+@keyframes popIn {
+  0% { transform: scale(0.7); opacity: 0; }
+  80% { transform: scale(1.1); opacity: 1; }
+  100% { transform: scale(1); }
+}
+@media (max-width: 600px) {
+  .home-title { font-size: 2rem; }
+  .home-content { padding: 1rem; }
+}
